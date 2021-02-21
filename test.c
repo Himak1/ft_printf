@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/14 21:06:09 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/19 14:10:47 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 20:18:59 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,8 +39,41 @@ int main()
 	char	*t = "0x12345678";
 	char	*u = "-0";
 
-	ft_printf("%0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d", i, j, k, l, m, c, e, d); //T16
+	int	ret1;
+	int	ret2;
+
+	ret1 = ft_printf("%%, \t, \\, \", \', +");
+	printf("\n");
+	ret2 = printf("%%, \t, \\, \", \', +");
+
+	printf("\n");
+
+	ret1 = ft_printf("%%%dbada%s%%**%s**-d%%0*d%-12s0*@", h, "bada", r, p, r, r, i, r, i, r, i);
+	printf("\n");
+	ret2 = printf("%%%dbada%s%%**%s**-d%%0*d%-12s0*@", h, "bada", r, p, r, r, i, r, i, r, i);
+
+	printf("\n");
+
+	ret1 = ft_printf("%-00000-----*i, %---0.*d, %0-0-0-0-0.*d, %-0-0-0-0-.*d, %-----.*d", a, i, a, i, a, i, a, i, a, i);
+	printf("\n");
+	ret2 = printf("%-00000-----*i, %---0.*d, %0-0-0-0-0.*d, %-0-0-0-0-.*d, %-----.*d", a, i, a, i, a, i, a, i, a, i);
+
+	printf("\n");
+
+	ret1 = ft_printf("%i, %d, %d, %d, %d, %d, %u, %x, %X", 0, 0, 0, 0, 0, 0, 0, 0, 0);
+	printf("\n");
+	ret2 = printf("%i, %d, %d, %d, %d, %d, %u, %x, %X", 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
 /*
+	PRINT(" --- Return : %d\n", PRINT("%*i, %*d, %*d, %*d, %*d, %*d, %*u, %*x, %*X", a, 0, a, 0, a, 0, a, 0, a, 0, a, 0, a, 0, a, 0, a, 0));
+	PRINT(" --- Return : %d\n", PRINT("%c, %-c, %12c, %-3c, %-1c, %1c, %-2c, %-4c, %5c, %3c, %-*c, %-*c, %*c, %*c", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, 0, 0, 0, 0, 0, 0, 0));
+	PRINT(" --- Return : %d\n", PRINT("%-2s, %.s, %-4s, %-2.4s, %-8.12s, %3s, %8s, %---2s, %.*s, %.0s, %.1s, %.2s, %.4s, %.8s", NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, -2, NULL, NULL, NULL, NULL, NULL, NULL));
+	// ^ Theoriquement un comportement indefini mais testé par la moulinette
+    PRINT(" --- Return : %d\n", PRINT("(null)"));
+	PRINT(" --- Return : %d\n", PRINT(""));
+
+	ft_printf("%0-i, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d, %0-d", i, j, k, l, m, c, e, d); //T16
+
 	printf(" --- Return : %d\n", ft_printf("%p, %i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", n, i, j, k, l, m, n, c, c, j, j, j)); //T2
 	printf(" --- Return : %d\n", printf("%p, %i, %d, %d, %d, %d, %s, %c, %d, %u, %x, %X", n, i, j, k, l, m, n, c, c, j, j, j)); //T2
 

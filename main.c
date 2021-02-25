@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/19 00:54:08 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/25 13:13:47 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 13:35:00 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 #include "ft_printf.h"
@@ -51,8 +51,9 @@ int	main(void)
 	r00 = 12;
 
 	ret = ft_printf("Lalalala, %d%% des gens qui parlent à Ly adorent %s. Ou Presque. %p", 100, "Ly", &r00);
-	printf("\n");
+	printf("\n%d", ret);
 	ret = printf("Lalalala, %d%% des gens qui parlent à Ly adorent %s. Ou Presque. %p", 100, "Ly", &r00);
+	printf("\n%d", ret);
 /*
 	ret = ft_printf("5%");
 	printf("\n5%\n");

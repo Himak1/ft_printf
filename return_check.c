@@ -6,23 +6,18 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/13 20:14:40 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/14 17:22:53 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:29:22 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	return_check(const char *format, int i, int pos, va_list args)
+void	return_check(const char **format, char **store, int *pos, int *i)
 {
-	int	ret;
-
-	ret = 0;
-	if (i == -1)
-		return (-1);
-	if (format[pos] != '\0')
-		ret = ft_vfprintf(1, format + pos, args);
-	if (ret == -1)
-		return (-1);
-	else
-		return (i + ret);
+	if (*store == 0 || *pos == -1)
+		*i = -1;
+	if (*store != 0)
+		ft_resetptr((void**)store);
+	if (*pos != -1)
+		*format = *format + *pos;
 }

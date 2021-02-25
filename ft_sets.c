@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 00:54:38 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/15 20:11:42 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:37:38 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 #include "ft_printf.h"
 #include <unistd.h>
 
-char	*char_set(c_lst *lst, va_list args)
+char	*char_set(t_strct *lst, va_list args)
 {
 	char	*ret;
 
@@ -29,7 +29,7 @@ char	*char_set(c_lst *lst, va_list args)
 	return (ret);
 }
 
-char	*str_set(c_lst *lst, va_list args)
+char	*str_set(t_strct *lst, va_list args)
 {
 	char		*ret;
 	char		*val;
@@ -52,7 +52,7 @@ char	*str_set(c_lst *lst, va_list args)
 	return (ret);
 }
 
-char	*percent_set(char c, c_lst *lst)
+char	*percent_set(char c, t_strct *lst)
 {
 	char	*ret;
 
@@ -86,7 +86,7 @@ char	*width_correct(char *ret, char flag, int olen, int nlen)
 	return (ret);
 }
 
-char	*varjoin(c_lst *lst, va_list args)
+char	*varjoin(t_strct *lst, va_list args)
 {
 	char	*var;
 

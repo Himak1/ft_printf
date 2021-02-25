@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/31 14:08:07 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/22 13:52:39 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:46:12 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ static void	recurwrite(unsigned int conv, int fd)
 	write(fd, &c, 1);
 }
 
-void		ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	conv;
 

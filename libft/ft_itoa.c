@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 21:42:28 by jhille        #+#    #+#                 */
-/*   Updated: 2021/01/21 15:56:09 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:45:08 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,7 @@ static void	conversion(unsigned int convert, int i, int n, char *ret)
 		ret[i] = '-';
 }
 
-char		*ft_itoa(int n)
+char	*ft_itoa(int n)
 {
 	int				i;
 	char			*ret;

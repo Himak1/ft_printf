@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 14:55:42 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/25 21:17:21 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:46:57 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static int	chklenrev(char const *str, char const *rm)
 	return (0);
 }
 
-char		*ft_strtrim(char const *str, char const *rm)
+char	*ft_strtrim(char const *str, char const *rm)
 {
 	int		i;
 	int		r;

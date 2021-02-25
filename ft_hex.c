@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/04 23:16:48 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/15 20:24:41 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:41:49 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	arraylen(long long convert)
 	return (i);
 }
 
-char		*hex_set(long long convert, int letcase)
+char	*hex_set(long long convert, int letcase)
 {
 	char	*ret;
 	int		i;
@@ -48,11 +48,11 @@ char		*hex_set(long long convert, int letcase)
 	return (ret);
 }
 
-char		*ptr_set(c_lst *lst, va_list args)
+char	*ptr_set(t_strct *lst, va_list args)
 {
-	char		*ret;
-	char		*temp;
-	int			len;
+	char			*ret;
+	char			*temp;
+	int				len;
 	unsigned long	val;
 
 	val = va_arg(args, unsigned long);
@@ -75,7 +75,7 @@ char		*ptr_set(c_lst *lst, va_list args)
 	return (ret);
 }
 
-char		*hexstr_set(c_lst *lst, va_list args)
+char	*hexstr_set(t_strct *lst, va_list args)
 {
 	char			*ret;
 	int				len;

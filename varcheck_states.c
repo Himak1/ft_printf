@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/17 18:20:32 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/19 12:00:36 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:49:16 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int	get_width_prec(const char *format, int startnum, int endnum)
 {
-	int	ret;
+	int		ret;
 	char	temp[11];
 
 	temp[endnum - startnum] = '\0';
@@ -49,7 +49,7 @@ void	arg_set(const char *str, int *strct_int, int *len, va_list args)
 	}
 }
 
-void	flag_set(const char *str, int *len, c_lst *lst)
+void	flag_set(const char *str, int *len, t_strct *lst)
 {
 	if (str[*len] == '-' || str[*len] == '0')
 	{

@@ -6,14 +6,14 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 21:02:22 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/17 20:13:21 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:44:34 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 #include "libft/libft.h"
 
-static void		negative_width(c_lst *lst)
+static void	negative_width(t_strct *lst)
 {
 	if (lst->width < 0)
 	{
@@ -22,13 +22,13 @@ static void		negative_width(c_lst *lst)
 	}
 }
 
-static int		prec_set(const char *str, c_lst *lst, int *len)
+static int	prec_set(const char *str, t_strct *lst, int *len)
 {
 	*len += 1;
 	return (struct_set(str, &lst->prec, len));
 }
 
-int			varcheck(const char *str, int len, va_list args, c_lst *lst)
+int	varcheck(const char *str, int len, va_list args, t_strct *lst)
 {
 	int	ret;
 

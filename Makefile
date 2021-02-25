@@ -6,7 +6,7 @@
 #    By: jhille <marvin@codam.nl>                     +#+                      #
 #                                                    +#+                       #
 #    Created: 2021/01/28 16:52:21 by jhille        #+#    #+#                  #
-#    Updated: 2021/02/14 17:54:00 by jhille        ########   odam.nl          #
+#    Updated: 2021/02/21 21:49:47 by jhille        ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,8 @@ FILES = ft_printf.c\
 	ft_int.c\
 	ft_varcheck.c\
 	printf_utils.c\
-	return_check.c
+	return_check.c\
+	varcheck_states.c
 CFLAGS = -Wextra -Wall -Werror
 OFILES = $(FILES:.c=.o)
 AFILES = $(OFILES) libft/libft.a

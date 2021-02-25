@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/22 14:02:54 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/28 12:28:19 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:46:29 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ static int	writearr(char const *str, char c, int sc, char **ret)
 	return (1);
 }
 
-char		**ft_split(char const *str, char c)
+char	**ft_split(char const *str, char c)
 {
 	char	**ret;
 	int		sc;

@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 21:42:28 by jhille        #+#    #+#                 */
-/*   Updated: 2021/01/23 01:42:06 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:47:18 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static void	conversion(unsigned int convert, int i, char *ret)
 	}
 }
 
-char		*ft_uitoa(unsigned int n)
+char	*ft_uitoa(unsigned int n)
 {
 	int				i;
 	char			*ret;

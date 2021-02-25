@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/27 00:29:47 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/15 20:17:24 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:38:35 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,9 +38,8 @@ char	*ft_strrealloc(char *ptr, size_t newsize)
 	return (ret);
 }
 
-void	strctzero(c_lst *ptr, char **store)
+void	strctzero(t_strct *ptr)
 {
-	*store = 0;
 	ptr->flags = 0;
 	ptr->width = 0;
 	ptr->prec = -1;

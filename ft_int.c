@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/21 14:16:18 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/15 20:01:32 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:42:49 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int	digits(int val)
 	return (ndigit);
 }
 
-static char	*negative_set(char *ret, c_lst *lst, int val)
+static char	*negative_set(char *ret, t_strct *lst, int val)
 {
 	int	i;
 	int	len;
@@ -52,7 +52,7 @@ static char	*negative_set(char *ret, c_lst *lst, int val)
 	return (ret);
 }
 
-char		*int_set(c_lst *lst, va_list args)
+char	*int_set(t_strct *lst, va_list args)
 {
 	char	*ret;
 	int		len;
@@ -79,7 +79,7 @@ char		*int_set(c_lst *lst, va_list args)
 	return (ret);
 }
 
-char		*uint_set(c_lst *lst, va_list args)
+char	*uint_set(t_strct *lst, va_list args)
 {
 	char			*ret;
 	unsigned int	val;

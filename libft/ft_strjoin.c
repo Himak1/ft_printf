@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 10:40:08 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/25 21:04:24 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/21 23:46:42 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	twostrlen(char const *str1, char const *str2)
 	return ((j + i) + 1);
 }
 
-char		*ft_strjoin(char const *str1, char const *str2)
+char	*ft_strjoin(char const *str1, char const *str2)
 {
 	int		i;
 	int		j;

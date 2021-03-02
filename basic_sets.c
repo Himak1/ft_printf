@@ -1,19 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_sets.c                                          :+:    :+:            */
+/*   basic_sets.c                                       :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2021/01/04 00:54:38 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:37:38 by jhille        ########   odam.nl         */
+/*   Created: 2021/02/25 18:20:08 by jhille        #+#    #+#                 */
+/*   Updated: 2021/02/26 00:33:25 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include <stdint.h>
 #include "ft_printf.h"
-#include <unistd.h>
 
 char	*char_set(t_strct *lst, va_list args)
 {
@@ -35,7 +33,7 @@ char	*str_set(t_strct *lst, va_list args)
 	char		*val;
 	int			len;
 
-	val = va_arg(args, char*);
+	val = va_arg(args, char *);
 	if (val == 0)
 		ret = ft_strdup("(null)");
 	else
@@ -77,11 +75,11 @@ char	*width_correct(char *ret, char flag, int olen, int nlen)
 	if (flag != '-' && nlen > olen && ret != 0)
 	{
 		ft_memmove(&ret[nlen - olen], ret, olen);
-		ft_memset((void*)ret, c, nlen - olen);
+		ft_memset((void *)ret, c, nlen - olen);
 	}
 	else if (nlen > olen && ret != 0)
 	{
-		ft_memset((void*)&ret[olen], c, nlen - (olen));
+		ft_memset((void *)&ret[olen], c, nlen - (olen));
 	}
 	return (ret);
 }

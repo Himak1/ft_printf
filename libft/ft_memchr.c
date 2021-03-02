@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 13:16:44 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/25 20:56:59 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:45:34 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memchr(const void *src, int c, size_t n)
 	unsigned char		cptr;
 
 	i = 0;
-	srcptr = (unsigned char*)src;
+	srcptr = (unsigned char *)src;
 	cptr = (unsigned char)c;
 	while (i < n && srcptr[i] != cptr)
 	{

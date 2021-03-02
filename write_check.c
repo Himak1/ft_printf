@@ -1,35 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strdup.c                                        :+:    :+:            */
+/*   write_check.c                                      :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 18:12:04 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/25 16:48:32 by jhille        ########   odam.nl         */
+/*   Created: 2021/02/25 21:51:19 by jhille        #+#    #+#                 */
+/*   Updated: 2021/02/26 18:42:06 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include <unistd.h>
 
-char	*ft_strdup(const char *str)
+int	write_check(char *store, int len, int i)
 {
-	char	*ret;
-	int		i;
-	int		strsize;
+	int	ret;
 
-	i = 0;
-	strsize = 0;
-	while (str[strsize] != '\0')
-		strsize++;
-	strsize++;
-	ret = (char *)malloc(strsize * sizeof(char));
-	if (ret == NULL)
-		return (NULL);
-	while (i < strsize)
-	{
-		ret[i] = str[i];
-		i++;
-	}
+	ret = 0;
+	if (store != 0)
+		ret = write(1, store, len);
+	if (ret != -1)
+		ret += i;
 	return (ret);
 }

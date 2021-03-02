@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 13:34:19 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/22 12:59:28 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:46:14 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memcpy(void *dest, const void *source, size_t num)
 	unsigned char	*sourceptr;
 
 	i = 0;
-	destptr = (unsigned char*)dest;
-	sourceptr = (unsigned char*)source;
+	destptr = (unsigned char *)dest;
+	sourceptr = (unsigned char *)source;
 	if (destptr == 0 && sourceptr == 0)
 		return (0);
 	while (i < num)

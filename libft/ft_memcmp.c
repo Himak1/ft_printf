@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 13:42:41 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/22 12:58:22 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:45:53 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_memcmp(const void *str1, const void *str2, size_t n)
 	unsigned char	*str2ptr;
 
 	i = 0;
-	str1ptr = (unsigned char*)str1;
-	str2ptr = (unsigned char*)str2;
+	str1ptr = (unsigned char *)str1;
+	str2ptr = (unsigned char *)str2;
 	while (i < n)
 	{
 		if (!(str1ptr[i] == str2ptr[i]))

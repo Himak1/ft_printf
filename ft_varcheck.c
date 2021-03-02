@@ -6,12 +6,11 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/05 21:02:22 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:44:34 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/26 00:33:50 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 static void	negative_width(t_strct *lst)
 {

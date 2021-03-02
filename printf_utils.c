@@ -6,13 +6,12 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/01/27 00:29:47 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:38:35 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/26 19:16:45 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 char	*ft_strrealloc(char *ptr, size_t newsize)
 {

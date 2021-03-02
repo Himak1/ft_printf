@@ -6,20 +6,20 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 19:50:45 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/24 21:12:57 by jhille        ########   odam.nl         */
+/*   Updated: 2021/03/01 23:47:50 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdarg.h>
 #include <stdlib.h>
 #include "ft_printf.h"
 
 int	printlen(const char *str, int len, va_list args, t_strct *lst)
 {
 	int	ret;
+	int	compare;
 
 	ret = 0;
+	compare = len;
 	while (str[len] != '\0')
 	{
 		if (str[len] == '%')
@@ -30,10 +30,12 @@ int	printlen(const char *str, int len, va_list args, t_strct *lst)
 			break ;
 		len++;
 	}
+	if (compare == len)
+		ret = -2;
 	return (len);
 }
 
-static void	ft_skipchar(const char *format, int *pos)
+void	ft_skipchar(const char *format, int *pos)
 {
 	*pos += 1;
 	while (ft_strchr(CONVS, format[*pos]) == 0 && format[*pos] != '\0')
@@ -61,12 +63,12 @@ static char	*store_join(char *store, t_strct *lst, va_list args)
 	}
 	else if (temp1 != 0)
 		store = temp1;
-	if (temp1 == 0)
-		ft_resetptr((void**)&store);
+	if (temp1 == 0 && store != 0)
+		ft_resetptr((void **)&store);
 	return (store);
 }
 
-int	ft_vfprintf(int fd, const char *format, va_list args)
+int	ft_vfprintf(const char *format, va_list args)
 {
 	int				i;
 	int				pos;
@@ -81,15 +83,14 @@ int	ft_vfprintf(int fd, const char *format, va_list args)
 		pos = printlen(format, 0, args, &lst);
 		if (pos > 0)
 			store = ft_substr(format, 0, pos);
-		if (pos != -1 && format[pos] == '%')
-		{
+		if (pos > 0 && store == 0)
+			return (-1);
+		if ((pos != -1 && format[pos] == '%') || pos == -2)
 			store = store_join(store, &lst, args);
-			ft_skipchar(format, &pos);
-		}
-		else if (pos != -1)
+		else if (pos != -1 && store != 0)
 			lst.width = ft_strlen(store);
 		if (pos != -1)
-			i += write(fd, store, lst.width);
+			i = write_check(store, lst.width, i);
 		return_check(&format, &store, &pos, &i);
 	}
 	return (i);
@@ -103,7 +104,7 @@ int	ft_printf(const char *format, ...)
 	if (format == 0)
 		return (-1);
 	va_start(args, format);
-	ret = ft_vfprintf(1, format, args);
+	ret = ft_vfprintf(format, args);
 	va_end(args);
 	return (ret);
 }

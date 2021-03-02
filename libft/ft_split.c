@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/22 14:02:54 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:46:29 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:46:49 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	**ft_split(char const *str, char c)
 		return (NULL);
 	i = 0;
 	sc = spltnum(str, c);
-	ret = ft_calloc((sc + 1), sizeof(char*));
+	ret = ft_calloc((sc + 1), sizeof(char *));
 	if (ret == NULL)
 		return (NULL);
 	while (str[i] == c && str[i] != '\0')

@@ -6,12 +6,11 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/17 18:20:32 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:49:16 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/26 00:34:33 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "libft/libft.h"
 
 int	get_width_prec(const char *format, int startnum, int endnum)
 {

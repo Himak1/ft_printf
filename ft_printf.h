@@ -6,14 +6,13 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/17 15:28:23 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:43:10 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/26 18:42:44 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 # include <stdarg.h>
-# include <stdint.h>
 # include "libft/libft.h"
 # define CONVS "cspdiuxX%"
 # define FLAGS "-0"
@@ -27,8 +26,10 @@ typedef struct s_trct
 }				t_strct;
 
 int		ft_printf(const char *format, ...);
-int		ft_vfprintf(int fd, const char *format, va_list args);
+int		ft_vfprintf(const char *format, va_list args);
 int		printlen(const char *str, int i, va_list args, t_strct *list);
+int		write_check(char *store, int len, int i);
+void	ft_skipchar(const char *format, int *pos);
 void	return_check(const char **format, char **store, int *pos, int *i);
 
 void	strctzero(t_strct *ptr);

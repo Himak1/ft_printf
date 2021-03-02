@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 10:40:08 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/21 23:46:42 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:48:49 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ char	*ft_strjoin(char const *str1, char const *str2)
 	if (str1 == 0 || str2 == 0)
 		return (NULL);
 	retlen = twostrlen(str1, str2);
-	ret = (char*)ft_calloc(retlen + 1, sizeof(char));
+	ret = (char *)ft_calloc(retlen + 1, sizeof(char));
 	if (ret == NULL)
 		return (NULL);
 	while (str1[i] != '\0')

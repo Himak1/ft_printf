@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 15:36:07 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/26 10:09:16 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:45:09 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 		nmemb = 1;
 		size = 1;
 	}
-	ret = (unsigned char*)malloc(nmemb * size);
+	ret = (unsigned char *)malloc(nmemb * size);
 	if (ret == NULL)
 		return (NULL);
 	while (i < (nmemb * size))

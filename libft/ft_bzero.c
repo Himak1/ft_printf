@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 13:26:28 by jhille        #+#    #+#                 */
-/*   Updated: 2020/11/22 12:47:34 by jhille        ########   odam.nl         */
+/*   Updated: 2021/02/25 16:44:52 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	*ft_bzero(void *dest, size_t n)
 	size_t			i;
 	unsigned char	*ptr;
 
-	ptr = (unsigned char*)dest;
+	ptr = (unsigned char *)dest;
 	i = 0;
 	while (i < n)
 	{

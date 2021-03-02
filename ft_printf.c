@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/12/16 19:50:45 by jhille        #+#    #+#                 */
-/*   Updated: 2021/03/01 23:47:50 by jhille        ########   odam.nl         */
+/*   Updated: 2021/03/02 16:51:58 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	printlen(const char *str, int len, va_list args, t_strct *lst)
 		len++;
 	}
 	if (compare == len)
-		ret = -2;
+		len = -2;
 	return (len);
 }
 

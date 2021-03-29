@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/25 18:20:22 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/25 23:48:08 by jhille        ########   odam.nl         */
+/*   Updated: 2021/03/03 12:42:49 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ char	*hex_set(long long convert, int letcase)
 	if (i == -1)
 		i = 0;
 	ret = ft_calloc(i + 2, 1);
-	while (i > -1)
+	while (i > -1 && ret != 0)
 	{
 		if (convert % 16 < 10)
 			ret[i] = (convert % 16) + 48;

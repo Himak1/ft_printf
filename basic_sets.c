@@ -6,7 +6,7 @@
 /*   By: jhille <marvin@codam.nl>                     +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2021/02/25 18:20:08 by jhille        #+#    #+#                 */
-/*   Updated: 2021/02/26 00:33:25 by jhille        ########   odam.nl         */
+/*   Updated: 2021/03/03 12:45:02 by jhille        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ char	*char_set(t_strct *lst, va_list args)
 	ret = ft_calloc(2, 1);
 	if (ret != 0)
 		ret[0] = va_arg(args, int);
-	if (lst->width != 0)
+	if (ret != 0 && lst->width != 0)
 		ret = width_correct(ret, lst->flags, 1, lst->width);
-	if (lst->width == 0)
+	if (ret != 0 && lst->width == 0)
 		lst->width = 1;
 	return (ret);
 }

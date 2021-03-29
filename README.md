@@ -4,19 +4,11 @@ A miniature printf implementation, as specified by the Codam curriculum. The com
 ft_printf handles the following conversions:
 
 -c
-
 -s
-
 -p
-
 -d
-
 -i
-
 -u
-
 -x
-
 -X
-
 -%
